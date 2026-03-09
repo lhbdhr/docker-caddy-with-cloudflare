@@ -4,7 +4,7 @@ RUN mkdir /caddy
 WORKDIR /caddy
 RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 RUN xcaddy build \
-    --with github.com/caddy-dns/cloudflare
+    --with github.com/caddy-dns/cloudflare \
     --with github.com/mholt/caddy-l4
 
 FROM alpine:latest as run
